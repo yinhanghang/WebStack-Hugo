@@ -1,6 +1,6 @@
-baseURL = "https://nav.bioitee.com"
+baseURL = "https://serverless-page-bucket-x58n26ro-1304440070.cos-website.ap-shanghai.myqcloud.com/"
 languageCode = "zh-CN"
-title = "Bio & IT 网址导航 | Hugo 主题"
+title = "网址导航"
 theme = "WebStack-Hugo"
 preserveTaxonomyNames = true
 disablePathToLower = true
@@ -9,23 +9,50 @@ publishDir = "docs"
 
 
 [params]
-    author = "shenweiyan"
-    description = "Webstack Hugo 网址导航 | Bio IT 爱好者"
+    author = "yinhanghang"
+    description = "Webstack Hugo 网址导航"
     siteurl = "./"
-    repository = "https://github.com/shenweiyan/WebStack-Hugo"
-    enableLoad = true
-    logosPath  = "assets/images/logos"
+	about         = "./about/about/"   # 左侧导航栏的"关于导航"页面
+
+	ruanjian   ="./post/软件/"
+	chajian   ="./post/插件/"
+	singlePath="../../"
+    repository = "https://github.com/yinhanghang/WebStack-Hugo" #关于界面右上角的标志
+	enablePreLoad = true		    		        # 网站完全打开前预加载的动画 #禁止加载刷新时候的滚动条
+    textPreLoad = "网址导航"						# 预加载的动画文字, 只有当enablePreLoad=true时生效
+    logosPath  = "assets/images/logos"				# 网站每个导航地址logo存放地址
+	
 
 [params.qweather]
     key = "085791e805a24491b43b06cf58ab31e7"
 
 [params.images]
     favicon           = "assets/images/favicon.png"
-    backgroundImage   = "assets/images/bg.jpg"
-    logoExpandLight   = "http://144.76.231.30:1313/assets/images/bioitee-expand-light.png"
+    searchImageL   = "assets/images/search-bg-light.jpg"
+    searchImageD   = "assets/images/search-bg-dark.jpg"
+    logoExpandLight   = "assets/images/bioitee-expand-light.png"
     logoExpandDark    = "assets/images/bioitee-expand-dark.png"
     logoCollapseLight = "assets/images/logo-collapse-light.png"
     logoCollapseDark  = "assets/images/logo-collapse-dark.png"
 
 [params.footer]
-    copyright = '本站内容源自互联网，如有内容侵犯了你的权益，请联系删除相关内容，联系邮箱：ishenweiyan@foxmail.com <br/>&copy; 2021 - {year} By [WebStack-Hugo](https://github.com/shenweiyan/WebStack-Hugo) | [Bio IT 爱好者](https://www.bioitee.com/) | [粤ICP备16023717号](http://beian.miit.gov.cn/)<br/>'
+    copyright = '<strong>本站内容源自互联网，如有内容侵犯了你的权益，请联系删除相关内容，联系本站作者邮箱：1349575530@qq.com </strong> <br/>&copy; 2021 - {year} 此主题 By [WebStack-Hugo](https://github.com/shenweiyan/WebStack-Hugo) | <br/>'
+
+
+
+#搜索栏相关
+#    ：modal_search.html      主页右上角，搜索引擎，热门搜索
+#    ：content_search.html    主页中间，搜索引擎，下面滚动的话
+#进入动画,左侧的关于导航
+#    ：sidebar.html    修改文件，是否显示，都放到本文件中了还可以修改， 关于
+#底部友情链接
+#   ：content_main.html 在data文件下创建friendlinks.yml文件
+#网页head
+#   ：content_header.html 
+#右下角设置
+#content_footer.html：搜索，联系我们，模式切换，回到顶部
+#
+#其他
+#   ：404.html，index.html 没什么需要修改
+#   ：header.html 修改title,放到本文件中了
+#   ：footer.html 夜间模式的代码
