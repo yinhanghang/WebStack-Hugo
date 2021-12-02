@@ -1,50 +1,96 @@
 # Hugo 版 WebStack 主题
 
-本项目是基于**纯静态**的网址导航网站 [webstack.cc](https://github.com/WebStackPage/WebStackPage.github.io) 制作的 [Hugo](https://gohugo.io/) 主题，其中部分代码参考了以下几个开源项目：<br/>
+本项目是基于**纯静态**的网址导航网站 [Hugo](https://gohugo.io/) 主题。
 
-- [WebStackPage/WebStackPage.github.io](https://github.com/WebStackPage/WebStackPage.github.io)
-- [liutongxu/liutongxu.github.io](https://github.com/liutongxu/liutongxu.github.io)
-- [iplaycode/webstack-hugo](https://github.com/iplaycode/webstack-hugo)
+来自[https://github.com/shenweiyan/WebStack-Hugo](https://github.com/shenweiyan/WebStack-Hugo)
 
-<br/>
-
-主题安装后，将 exampleSite 目录下的文件复制到 hugo 站点根目录，根据需要把 config.toml 的一些信息改成自己的，导航的网址信息可通过 data 目录下 webstack.yml 修改。
-具体执行步骤如下：
-
-- 克隆仓库
+# 安装
 
 ```
-$ git clone https://github.com/shenweiyan/WebStack-Hugo.git
+1.安装hugo，可以设置环境变量，也可以使用绝对路径执行
+2.新建文件夹作为站点目录，命令行窗口（CMD）进入。
+3.执行，在当前目录创建站点
+	hugo.exe  new site ./
+4.进入themes目录，克隆仓库，执行
+	git clone git@github.com:yinhanghang/WebStack-Hugo.git
+5.文件说明及操作
+	1.将exampleSite目录中的文件移到站点目录。选择替换
+		content：about目录下可以修改about.md，其他没必要修改
+		data：webstack.yml文件配置网站的内容
+			  friendlinks.yml文件配置友情链接
+		config.toml文件配置站点信息
+	2.除了layouts和static都可以删掉
+6.启动，在站点目录进入命令行窗口，执行
+	hugo.exe server --theme=WebStack-Hugo
+会出现提示：一般是127.0.0.1:1313可以启动服务
+		
 ```
 
-- 进入 exampleSite 目录执行 hugo server
-
 ```
-$ cd WebStack-Hugo/exampleSite/
-$ hugo server --themesDir ../..
-
-# 如果你知道你的公网 ip, 如下面的 132.76.230.31, 可以使用下面的方式执行 hugo server
-$ hugo server --baseUrl=132.76.230.31 --bind=0.0.0.0 --themesDir ../..
+themes目录文件树：
+WebStack-Hugo
+    +---exampleSite
+    |   +---content
+    |   |   +---about
+    |   |   \---post
+    |   \---data
+    +---layouts
+    |   +---partials
+    |   \---_default
+    \---static
+        \---assets
+            +---404
+            |   +---css
+            |   +---img
+            |   \---js
+            +---css
+            |   \---fonts
+            |       +---elusive
+            |       |   +---css
+            |       |   \---font
+            |       +---font-awesome
+            |       |   +---css
+            |       |   +---fonts
+            |       |   +---less
+            |       |   \---scss
+            |       +---fontawesome
+            |       |   +---css
+            |       |   \---fonts
+            |       +---glyphicons
+            |       +---linecons
+            |       |   +---css
+            |       |   \---font
+            |       \---meteocons
+            |           +---css
+            |           \---font
+            +---images
+            |   +---logos
+            \---js
+            
+            
+            
+            
 ```
 
-Windows/Linux 下更加详细的安装说明请参考：
-- [https://www.yuque.com/shenweiyan/cookbook/webstack-hugo](https://www.yuque.com/shenweiyan/cookbook/webstack-hugo)
+# 个性化
+
+1.图片的修改：根据config.toml文件，或者直接到themes\WebStack-Hugo\static\assets\images目录下修改
+
+2.一些文字，可以在config.toml文件中修改。
+
+3.图标修改，浏览器使用F12寻找名字到themes\WebStack-Hugo\layouts文件中修改html文件
+
+4.其他一些信息都建议到themes\WebStack-Hugo\layouts中查找修改
 
 
-这是一个开源的公益项目，你可以拿来制作自己的网址导航，也可以做与导航无关的网站。
 
-WebStack 有非常多的魔改版本，这是其中一个。如果你对本主题进行了一些个性化调整，欢迎来本项目中 issue 分享一下！
-
-<br/>
-
-### 主题开源地址
-
-[https://github.com/shenweiyan/WebStack-Hugo](https://github.com/shenweiyan/WebStack-Hugo)
-
-<br/>
-
-### 主题演示地址
+###  主题演示地址
 
 - [https://bioitee.com](https://bioitee.com)
+
 - [https://shenweiyan.github.io/WebStack-Hugo](https://shenweiyan.github.io/WebStack-Hugo)
+
+- [hugo_webstack](https://serverless-page-bucket-x58n26ro-1304440070.cos-website.ap-shanghai.myqcloud.com/)
+
+  
 

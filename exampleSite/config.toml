@@ -1,4 +1,4 @@
-baseURL = "https://serverless-page-bucket-x58n26ro-1304440070.cos-website.ap-shanghai.myqcloud.com/"
+baseURL = "https://www.baidu.com"
 languageCode = "zh-CN"
 title = "网址导航"
 theme = "WebStack-Hugo"
@@ -13,9 +13,6 @@ publishDir = "docs"
     description = "Webstack Hugo 网址导航"
     siteurl = "./"
 	about         = "./about/about/"   # 左侧导航栏的"关于导航"页面
-
-	ruanjian   ="./post/软件/"
-	chajian   ="./post/插件/"
 	singlePath="../../"
     repository = "https://github.com/yinhanghang/WebStack-Hugo" #关于界面右上角的标志
 	enablePreLoad = true		    		        # 网站完全打开前预加载的动画 #禁止加载刷新时候的滚动条
